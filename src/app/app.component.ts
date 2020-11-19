@@ -1,5 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -9,22 +9,5 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class AppComponent {
   title = 'slot-counter-angular11';
 
-  @ViewChild('sidenav')
-  sidenav!: MatSidenav;
-  isExpanded = true;
-  showSubmenu = false;
-  isShowing = false;
-  showSubSubMenu = false;
-
-  mouseenter(): void {
-    if (!this.isExpanded) {
-      this.isShowing = true;
-    }
-  }
-
-  mouseleave(): void {
-    if (!this.isExpanded) {
-      this.isShowing = false;
-    }
-  }
+  constructor() {}
 }

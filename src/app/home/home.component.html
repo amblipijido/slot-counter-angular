@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div>
+  <button type="button" [ngClass]="(connected) ? 'btn btn-success btn-block':'btn btn-danger btn-block'" (click)="connect()">
+    {{connected ? 'Disconnect' : 'Connect'}}
+    <span *ngIf="tryConnection"  class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+  </button>
+</div>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let message of messages">{{message.content}}</li>
+</ul>
