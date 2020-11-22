@@ -1,9 +1,35 @@
-<div>
+<div class="container">
+<div class="row mb-2">
   <button type="button" [ngClass]="(connected) ? 'btn btn-success btn-block':'btn btn-danger btn-block'" (click)="connect()">
     {{connected ? 'Disconnect' : 'Connect'}}
     <span *ngIf="tryConnection"  class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
   </button>
 </div>
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let message of messages">{{message.content}}</li>
-</ul>
+<div class="row row-cols-1 row-cols-md-2">
+  <div class="col mb-4" *ngFor="let line of race.lines">
+    <div class="card">
+      <h2 class="card-header d-flex justify-content-between">{{line.raceDriver.alias}}
+        <span class="badge badge-secondary">{{line.position}}</span></h2>
+      <div class="card-body">
+        <h3 class="card-title d-flex justify-content-between align-items-center">{{line.raceCar.model}}
+          <span class="badge badge-danger badge-pill">{{(line.bestLap / 1000).toFixed(3)}}</span></h3>
+        <div class="container">
+          <div class="row align-items-center bg-light border border-primary rounded-pill p-2 mb-2">
+            <fa-icon class="col-md-1"[icon]="['fas', 'gas-pump']" size="2x" ></fa-icon>
+            <div class="col-md-11">
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: {{line.raceCar.fuelRemaining}}%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center"
+              *ngFor="let lap of line.laps | limitLapsAndReverse">{{lap | lapTime}}
+          <span class="badge badge-primary badge-pill">{{lap | lapSpeed}}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "numberOfLines": 2,
+    "name": "Laguna Seca",
+    "description": "The description should be here for explain all the speedway features",
+    "length": 18.75,
+    "races": []
+  },
+  {
+    "id": 2,
+    "numberOfLines": 2,
+    "name": "Circuit de Catalunya",
+    "description": "The description should be here for explain all the speedway features",
+    "length": 22.65,
+    "races": []
+  },
+  {
+    "id": 3,
+    "numberOfLines": 2,
+    "name": "Cheste",
+    "description": "The description should be here for explain all the speedway features",
+    "length": 17.34,
+    "races": []
+  }
+]

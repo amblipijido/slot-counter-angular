@@ -1,0 +1,35 @@
+{
+  "lapsToFinish" : 10,
+  "timeToFinish" : 0,
+  "lines" : [{
+    "position": 1,
+    "lineNumber": 1,
+    "raceDriver": {"alias" : "Amblipijido"},
+    "raceCar": {
+      "fuelConsumption" : 5,
+      "fuelRemaining" : 100,
+      "brand" : "Scalextric",
+      "model" : "Renault 5 Copa Turbo"
+    },
+    "laps" : [],
+    "lenght": 15.78,
+    "bestLap": 0
+  }, {
+    "position": 2,
+    "lineNumber": 2,
+    "raceDriver": {"alias" : "Carlitos"},
+    "raceCar": {
+      "fuelConsumption" : 7,
+      "fuelRemaining" : 100,
+      "brand" : "Ninco",
+      "model" : "Seat 124 Sport"
+    },
+    "laps" : [],
+    "lenght": 15.95,
+    "bestLap": 0
+  }],
+  "speedway" : {
+    "name" : "Circuito casero 1",
+    "length" : 14.85
+  }
+}

@@ -1,6 +1,6 @@
-import { Action } from './action';
+import { Event } from './event';
 
 export interface Message {
   content?: any;
-  action?: Action;
+  event?: Event;
 }

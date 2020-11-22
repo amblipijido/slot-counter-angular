@@ -1,5 +1,7 @@
 export enum Event {
   LAP = 'lap',
   RACE = 'race',
-  PENALTY = 'penalty'
+  PENALTY = 'penalty',
+  CONNECTION = 'connection',
+  REFUELING = 'refueling',
 }

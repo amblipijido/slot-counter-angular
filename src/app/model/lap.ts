@@ -1,14 +1,10 @@
 import { Race } from './race';
-import { Driver } from './driver';
-import { Car } from './car';
+import { Line } from './line';
 
 export interface Lap {
-  id: number;
-  lineNumber: number;
-  race: Race;
-  raceDriver: Driver;
-  raceCar: Car;
+  id?: number;
+  line: Line;
+  race?: Race;
   lapTime: number;
-  lapNumber: number;
-  lapDate: DataCue;
+  lapNumber?: number;
 }
